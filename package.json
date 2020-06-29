@@ -1,0 +1,21 @@
+{
+  "name": "monad-transformers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divsense/monad-transformers.git"
+  },
+  "author": "Oleg Kirichenko",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.8.2"
+  },
+  "dependencies": {
+    "ramda": "^0.27.0"
+  }
+}
