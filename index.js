@@ -16,6 +16,7 @@ module.exports = {
     Stack,  StackT,
     Reader, ReaderT,
     Writer, WriterT,
+    Recorder, RecorderT,
     Task,   TaskT,
     Either, EitherT
 }
