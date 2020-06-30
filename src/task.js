@@ -18,6 +18,9 @@ const Task = fork =>
 Task.of = x => Task((rej, res) => res(x))
 Task.rejected = x => Task((rej, res) => rej(x))
 Task.fromPromised = fn => (...args) => Task((rej, res) => fn(...args).then(res).catch(rej))
+Task.liftEither = either => 
+    TaskEither((rej, res) =>
+        either.fold (left => rej (left), right => res (right)))
 
 module.exports = Task
 
