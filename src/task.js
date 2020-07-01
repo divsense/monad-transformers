@@ -16,6 +16,7 @@ const Task = fork =>
 
 })
 Task.of = x => Task((rej, res) => res(x))
+Task.resolve = f => Task((rej, res) => res(f()))
 Task.rejected = x => Task((rej, res) => rej(x))
 Task.fromPromised = fn => (...args) => Task((rej, res) => fn(...args).then(res).catch(rej))
 Task.liftEither = either => 
