@@ -31,7 +31,7 @@ test ('StackT, push, peek', t => {
 
     const x = Transformer.push (2)
                    .join (Transformer.push (3))
-                   .join (Transformer.peek)
+                   .join (Transformer.peek ())
 
     x.run ([])
      .fold (

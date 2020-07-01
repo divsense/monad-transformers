@@ -20,7 +20,7 @@ test ('Stack, push, peek', t => {
 
     const x = Stack.push (2)
                    .join (Stack.push (3))
-                   .join (Stack.peek)
+                   .join (Stack.peek ())
 
     const res = x.run ([])
     t.deepEqual (res, [3, [3, 2]])
