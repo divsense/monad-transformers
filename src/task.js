@@ -21,7 +21,7 @@ Task.rejected = x => Task((rej, res) => rej(x))
 Task.fromPromised = fn => (...args) => Task((rej, res) => fn(...args).then(res).catch(rej))
 Task.liftEither = either => 
     Task((rej, res) =>
-        eiher.fold (left => rej (left), right => res (right)))
+        either.fold (left => rej (left), right => res (right)))
 
 module.exports = Task
 
